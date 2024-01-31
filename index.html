@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/choices.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700&amp;subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css"/>
+    <script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!--checkbox-->
+
+        <form action="" class="check-form">
+            <legend class="check-title">Категории:</legend>
+            <label for="check" style="cursor: pointer;">
+                <input type="checkbox" id="check" name="check" />
+                Динозавры
+                <span></span>
+            </label>
+    
+            <label for="check2" style="cursor: pointer;">
+                <input type="checkbox" id="check2" name="check2" />
+                Медведи
+                <span></span>
+            </label>
+    
+            <label for="check3" style="cursor: pointer;">
+                <input type="checkbox" id="check3" name="check3" />
+                Косули
+                <span></span>
+            </label>
+    
+            <label for="check4" style="cursor: pointer;">
+                <input type="checkbox" id="check4" name="check4" />
+                Лисы
+                <span></span>
+            </label>
+    
+            <label for="check5" style="cursor: pointer;">
+                <input type="checkbox" id="check5" name="check5" />
+                Волки
+                <span></span>
+            </label>
+    
+            <label for="check6" style="cursor: pointer;">
+                <input type="checkbox" id="check6" name="check6" />
+                Олени и лоси
+                <span></span>
+            </label>
+        </form>
+
+
+        <!--SELECT-->
+
+        <select name="Материал" id="js-choice">
+            <option>Материал</option>
+            <option value="1">Древесина</option>
+            <option value="2">Металл</option>
+            <option value="3">Камень</option>
+            <option value="4">Пластик</option>
+            <option value="5">Композитный</option>
+            <option value="6">Гипс</option>
+        </select>
+
+
+
+            <!--Yzndex-map-->
+
+        <div id="map" style="width: 600px; height: 400px"></div>
+
+        <!--Scrollbar-->
+        <div class="SCROLLBAR" data-simplebar  data-simplebar-auto-hide="false" id="myEl">
+            <p class="scrooltext">
+                Сложно сказать, почему многие известные личности представлены в исключительно положительном свете.
+                Лишь активно развивающиеся страны третьего мира будут объективно рассмотрены соответствующими инстанциями. 
+                Мы вынуждены отталкиваться от того, что высокотехнологичная концепция общественного уклада представляет собой интересный эксперимент проверки глубокомысленных рассуждений.
+                Имеется спорная точка зрения, гласящая примерно следующее: непосредственные участники технического прогресса освещают чрезвычайно интересные особенности картины в целом, однако конкретные выводы, разумеется, обнародованы. 
+                Значимость этих проблем настолько очевидна, что социально-экономическое развитие, а также свежий взгляд на привычные вещи - безусловно открывает новые горизонты для первоочередных требований.
+            </p>        
+        </div>
+
+
+        <!--Form mask valdator-->
+
+        <form class="form" action="#" method="post">
+
+            <label class="form-label label-text"  for="">
+                <input class="input-all input-text " type="text" name="name" data-validate-field="name" id="" placeholder="Имя*">
+            </label>
+
+            <label class="form-label label-tel" for="">
+                <input class="input-all input-tel" type="tel" name="telephon" data-validate-field="tel" id="" placeholder="Телефон*">
+            </label>
+
+            <label class="form-label" for="">
+                <input class="input-all input-mail" type="email" name="Email" data-validate-field="mail" id="" placeholder="E-mail*">
+            </label>
+
+            <button class="form-btn">Заказать</button>
+        </form>
+
+
+        <!--Tooltip-->
+
+        <div class="content">
+            <div class="tooltip">
+                <p class="content-text">Следует отметить, что социально-экономическое развитие 
+                    способствует повышению качества переосмысления внешнеэкономических политик.
+                    <span class="help" data-tippy-content="Глава 2, страница 176">
+                        <svg class="tippy-svg" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M8 16C12.4183 16 16 12.4183 16 8C16 3.58172 12.4183 0 8 0C3.58172 0 0 3.58172 0 8C0 12.4183 3.58172 16 8 16ZM8 3C7.33333 3 7 3.31919 7 3.95758C7 4.60026 7.33333 4.92159 8 4.92159C8.33333 4.92159 8.58233 4.83805 8.74699 4.67095C8.91566 4.49957 9 4.26178 9 3.95758C9 3.31919 8.66667 3 8 3ZM7.07831 13H8.91566V5.81491H7.07831V13Z" fill="#BCBCBC"/>
+                        </svg>                     
+                    </span>
+                </p>
+                
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+   <!--Scripts__select-->
+    <script src="choices.min.js"></script>
+    <script>
+        const element = document.querySelector('select');
+        const choices = new Choices(element, {
+            searchEnabled: false,
+            itemSelectText: ''
+        });
+    </script>
+
+    <!--Scripts__map-->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш API-ключ&lang=ru_RU" type="text/javascript"></script>
+    <script type="text/javascript">
+        // Функция ymaps.ready() будет вызвана, когда
+        // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
+        ymaps.ready(init);
+        function init(){
+            // Создание карты.
+            var myMap = new ymaps.Map("map", {
+                // Координаты центра карты.
+                // Порядок по умолчанию: «широта, долгота».
+                // Чтобы не определять координаты центра карты вручную,
+                // воспользуйтесь инструментом Определение координат.
+                center: [48.872185073737896,2.354223999999991],
+                // Уровень масштабирования. Допустимые значения:
+                // от 0 (весь мир) до 19.
+                zoom: 17
+            });
+
+            var placemark = new ymaps.Placemark([48.872185073737896,2.354223999999991], {}, {
+                iconLayout:'default#image',
+                iconImageHref: 'img/Subtract.svg',
+                iconImageSize: [30, 42],
+                iconImageOffset: [-3, -42]
+            });
+            myMap.geoObjects.add(placemark);
+        }
+    </script>
+
+        <!--Scripts__scrollbar-->
+    <script>
+        new SimpleBar(document.getElementById('myEl'), {
+            autoHide: false,
+            scrollbarMaxSize: 70
+  
+        });
+    </script>
+
+     <!--Scripts__Form mask valdator-->
+
+    <script src="inputmask.min.js"></script>
+    <script src="just-validate.min.js"></script>
+    <script>
+        const form = document.querySelector(".form");
+        const telSelector = document.querySelector('input[type="tel"]');
+        const inputmask = new Inputmask('+7 (999) 999-99-99');
+        inputmask.mask(telSelector);
+
+
+        new window.JustValidate('.form', {
+            rules: {
+                name: {
+                    required: true,
+                    minLength: 2,
+                    maxLength: 30
+                },
+
+                tel:{
+                    required: true,
+                    function:() => {
+                        const phone = telSelector.inputmask.unmaskedvalue()
+                        return Number(phone) && phone.length === 10
+                    }
+                },
+
+                mail:{
+                    required: true,
+                    email: true
+                },
+            },
+            colorWrong: '#FF5C00',
+            messages: {
+                name: {
+                    required: "Вы не ввели имя"
+                },
+
+                tel:{
+                    required: "Вы не ввели телефон"
+                },
+
+                mail:{
+                    required: "Вы не ввели e-mail"
+                }
+            }
+        });
+
+    </script>
+
+    <!--Scripts__tooltip-->
+
+    <script src="https://unpkg.com/@popperjs/core@2"></script>
+    <script src="https://unpkg.com/tippy.js@6"></script>
+    <script>
+    tippy('[data-tippy-content]');
+
+        tippy(span, {
+    // default
+    trigger: 'hover',
+    });
+    </script>
+</body>
+</html>
